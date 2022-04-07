@@ -12,7 +12,7 @@ FORMAT = 'utf-8'
 # connect to rendezvous
 print('connecting to rendezvous server')
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 sock.bind((socket.gethostbyname(socket.gethostname()), 50001))
 sock.sendto(b'0', ADDR)
 
