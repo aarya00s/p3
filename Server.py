@@ -6,7 +6,7 @@ SERVER = socket.gethostbyname(socket.gethostname()) #Gets IP of server
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
 sock.bind(ADDR)
 
 while True:
